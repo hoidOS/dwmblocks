@@ -2,9 +2,10 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 
+    {"", "",					5,		0},
 
-
-    {"",  		"dwm-time", 		60, 			    1},
+    {"",        "date '+%Y-%m-%d (%a)' | awk '{print \"📆 \" $0}'",					60,		1},
+    {"",  		"date '+%H:%M' | awk '{print \"🕑 \" $0 \" |\"}'", 		            60, 	1},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
